@@ -1,7 +1,7 @@
 <h1>Display All Players Component</h1>
 
 
-<button type="button" class="btn btn-success" (click)="getAllPlayers()">View All Players</button>
+<button type="button" class="btn btn-success" (click)="sortPlayers()">sort Players</button>
 
 <br><br>
 
@@ -27,7 +27,7 @@
       <td>{{player.jerseyNumber}}</td>
       <td>{{player.role}}</td>
       <td>{{player.teamName}}</td>
-      <td>{{player.countryName}}</td>
+      <td [ngStyle]="{'color': 'red'}">{{player.countryName}}</td>
       <td>{{player.totalMatches}}</td>
       <td>{{player.description}}</td>
     </tr>

@@ -22,7 +22,9 @@ export class UpdatePlayersComponent {
         alert("Player updated successfully..");
       },
       (err) => {
-        console.log(err);
+        if (err.status === 404) {
+          alert(err.error); 
+        }
       }
     );
   }

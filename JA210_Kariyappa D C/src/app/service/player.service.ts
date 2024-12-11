@@ -27,4 +27,8 @@ export class PlayerService {
   updatePlayerDetails(player: Player): Observable<Player> {
     return this.http.put<Player>(`${this.baseURL}update/${player.pId}`, player);
   }
+
+  sortPlayers(): Observable<Player[]> {
+    return this.http.get<Player[]>(this.baseURL + "sorted");
+  }
 }

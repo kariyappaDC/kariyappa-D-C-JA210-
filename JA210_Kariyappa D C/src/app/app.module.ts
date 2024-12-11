@@ -12,6 +12,7 @@ import { PlayerService } from './service/player.service';
 import { AddPlayersComponent } from './controller/add-players/add-players.component';
 import { DisplayPlayersComponent } from './controller/display-players/display-players.component';
 import { UpdatePlayersComponent } from './controller/update-players/update-players.component';
+import { SortPlayersComponent } from './controller/sort-players/sort-players.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { UpdatePlayersComponent } from './controller/update-players/update-playe
     AppComponent,
     AddPlayersComponent,
     DisplayPlayersComponent,
-    UpdatePlayersComponent
+    UpdatePlayersComponent,
+    SortPlayersComponent
   ],
   imports: [
     BrowserModule,

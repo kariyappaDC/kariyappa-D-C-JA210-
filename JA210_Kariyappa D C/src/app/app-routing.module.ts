@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { DisplayPlayersComponent } from './controller/display-players/display-players.component';
 import { AddPlayersComponent } from './controller/add-players/add-players.component';
 import { UpdatePlayersComponent } from './controller/update-players/update-players.component';
+import { SortPlayersComponent } from './controller/sort-players/sort-players.component';
 
 
 const routes: Routes = [
@@ -11,8 +12,8 @@ const routes: Routes = [
   { path: 'home', component: AppComponent },
   { path: 'display-players', component: DisplayPlayersComponent },
   { path: 'add-player', component: AddPlayersComponent },
-  { path: 'update-player', component: UpdatePlayersComponent }
-
+  { path: 'update-player', component: UpdatePlayersComponent },
+  { path: 'sort-player', component: SortPlayersComponent }
 ];
 
 @NgModule({
