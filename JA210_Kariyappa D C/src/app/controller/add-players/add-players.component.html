@@ -1,0 +1,55 @@
+<h1>Add Player Details Here</h1>
+
+<form class="container col-md-4" #playerForm="ngForm" (ngSubmit)="addPlayer(playerForm.value)">
+
+ 
+  <div>
+    Enter Player Name: <input type="text" class="form-control" required  name="pName" ngModel #nameControl="ngModel">
+    <span style="color: red" *ngIf="nameControl.touched && nameControl.invalid">Name is mandatory</span>
+  </div>
+  <br>
+
+
+  <div>
+    Enter Jersey Number: <input type="number" class="form-control" required name="jerseyNumber" ngModel #jerseyNumberControl="ngModel">
+    <span style="color: red" *ngIf="jerseyNumberControl.touched && jerseyNumberControl.invalid">Jersey number is required</span>
+  </div>
+  <br>
+
+  <div>
+    Enter Role: <input type="text" class="form-control" required name="role" ngModel #roleControl="ngModel">
+    <span style="color: red" *ngIf="roleControl.touched && roleControl.invalid">Role is mandatory.</span>
+  </div>
+  <br>
+
+
+  <div>
+    Enter Total Matches: <input type="number" class="form-control" required name="totalMatches" ngModel #totalMatchesControl="ngModel">
+    <span style="color: red" *ngIf="totalMatchesControl.touched && totalMatchesControl.invalid">Total matches are required</span>
+  </div>
+  <br>
+
+
+  <div>
+    Enter Team Name: <input type="text" class="form-control" required name="teamName" ngModel #teamNameControl="ngModel">
+    <span style="color: red" *ngIf="teamNameControl.touched && teamNameControl.invalid">Team name is mandatory.</span>
+  </div>
+  <br>
+
+ 
+  <div>
+    Enter Country Name: <input type="text" class="form-control" required name="countryName" ngModel #countryNameControl="ngModel">
+    <span style="color: red" *ngIf="countryNameControl.touched && countryNameControl.invalid">Country name is mandatory.</span>
+  </div>
+  <br>
+
+
+  <div>
+    Enter Description: <textarea class="form-control" name="description" required ngModel  #descriptionControl="ngModel"></textarea>
+    <span style="color: red" *ngIf="descriptionControl.touched && descriptionControl.invalid">Description is mandatory.</span>
+  </div>
+  <br>
+
+
+  <button type="submit" class="btn btn-primary" [disabled]="playerForm.invalid">Add Player</button>
+</form>

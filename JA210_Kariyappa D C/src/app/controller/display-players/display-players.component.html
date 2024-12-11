@@ -1,0 +1,37 @@
+<h1>Display All Players Component</h1>
+
+<!-- Button to fetch all players -->
+<button type="button" class="btn btn-success" (click)="getAllPlayers()">View All Players</button>
+
+<br><br>
+
+
+
+
+<div *ngIf="playerList.length > 0" class="container col-lg-6">
+  <table class="table table-dark">
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>JERSEY</th>
+      <th>ROLE</th>
+      <th>TEAM NAME</th>
+      <th>COUNTRY NAME</th>
+      <th>TOTAL MATCHES</th>
+      <th>DESCRIPTION</th>
+
+    </tr>
+    <tr *ngFor="let player of playerList">
+      <td>{{player.pId}}</td>
+      <td>{{player.pName}}</td>
+      <td>{{player.jerseyNumber}}</td>
+      <td>{{player.role}}</td>
+      <td>{{player.teamName}}</td>
+      <td>{{player.countryName}}</td>
+      <td>{{player.totalMatches}}</td>
+      <td>{{player.description}}</td>
+    </tr>
+  </table>
+</div>
+
+

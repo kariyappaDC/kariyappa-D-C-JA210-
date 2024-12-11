@@ -1,0 +1,16 @@
+<h1>Update Player Details Here</h1>
+
+<form class="container col-md-4" #formData="ngForm" (ngSubmit)="updatePlayerDetails(formData.value)">
+  
+    Enter Player ID: <input type="number" class="form-control" name="pId" ngModel><br>
+    Enter Player Name: <input type="text" class="form-control" name="pName" ngModel><br>
+    Enter Jersey Number: <input type="number" class="form-control" name="jerseyNumber" ngModel><br>
+    Enter Role: <input type="text" class="form-control" name="role" ngModel><br>
+    Enter Team Name: <input type="text" class="form-control" name="teamName" ngModel><br>
+    Enter Country Name: <input type="text" class="form-control" name="countryName" ngModel><br>
+    Enter Total Matches: <input type="number" class="form-control" name="totalMatches" ngModel><br>
+    Enter Description: <input type="text" class="form-control" name="description" ngModel><br>
+
+    <button type="submit" class="btn btn-secondary">Update Player</button>
+
+</form>
